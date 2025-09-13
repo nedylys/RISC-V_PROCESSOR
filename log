@@ -1,0 +1,2002 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/bigsoft/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /bigsoft/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab tb_autotest -cc gcc -initfile=/bigsoft/Xilinx/Vivado/2019.1/data/xsim/ip/xsim_ip.ini -L xpm -nolog -debug typical -generic_top mutant=0 
+Multi-threading is on. Using 4 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling package work.pkg
+Compiling package work.txt_util
+Compiling architecture rtl of entity work.CPU_PC [cpu_pc_default]
+Compiling architecture rtl of entity work.CPU_CSR [\CPU_CSR(interrupt_vector="00000...]
+Compiling architecture rtl of entity work.CPU_CND [cpu_cnd_default]
+Compiling architecture rtl of entity work.CPU_PO [\CPU_PO(reset_vector="0000000000...]
+Compiling architecture rtl of entity work.CPU [\CPU(reset_vector="0000000000000...]
+Compiling architecture rtl of entity work.PROC_bus [\PROC_bus(n_slave=3,base=("00000...]
+Compiling architecture behavioral of entity work.RAM32 [\RAM32(memory_size=32768,file_na...]
+Compiling architecture rtl of entity work.IP_ITpush [ip_itpush_default]
+Compiling architecture rtl of entity work.IP_PLIC [ip_plic_default]
+Compiling architecture rtl of entity work.IP_CLINT [ip_clint_default]
+Compiling architecture behavior of entity work.tb_autotest
+Built simulation snapshot work.tb_autotest
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source /scratch/mountash/.CEPcache/sim/xsim.dir/work.tb_autotest/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Apr 26 17:19:09 2025...
+
+****** xsim v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/work.tb_autotest/xsim_script.tcl
+# xsim {work.tb_autotest} -wdb {trace.wdb} -autoloadwcfg -tclbatch {/user/8/.base/mountash/home/mountash_oudrhirs/config/autotest.xsim.tcl}
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source /user/8/.base/mountash/home/mountash_oudrhirs/config/autotest.xsim.tcl
+## if {[info exists ::env(TESTS)]} {
+## 	set string_test $env(TESTS)
+## } else {
+## 	set string_test 
+## }
+## set tests [regexp -all -inline -- {\S+} $string_test]
+## puts $string_test
+ addi  add  andi  and  auipc  beq  bge  bgeu  blt  bltu  bne  jalr  jal  lb  lbu  lh  lhu  lui  lw  ori  or  rebouclage  sb  sh  slli  sll  slti  sltiu  slt  sltu  srai  sra  srli  srl  sub  sw  xori  xor
+## puts $tests
+addi add andi and auipc beq bge bgeu blt bltu bne jalr jal lb lbu lh lhu lui lw ori or rebouclage sb sh slli sll slti sltiu slt sltu srai sra srli srl sub sw xori xor
+## foreach test $tests {
+## 	put "Preparing test: ${test}"
+## 	file delete test_default.out test_default.irq test_default.setup test_default.mem
+## 	file link -symbolic test_default.out   ${test}/test_default.out
+## 	file link -symbolic test_default.irq   ${test}/test_default.irq
+## 	file link -symbolic test_default.setup ${test}/test_default.setup
+## 	file link -symbolic test_default.mem   ../mem/${test}.mem
+## 
+## 	put "Running test: ${test}"
+## 	restart
+## 	run -all
+## 	file copy -force test_default.res  ${test}
+## 	file copy -force test_default.test ${test}
+## }
+Preparing test: addi
+Running test: addi
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00500F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 005F8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x0000000A  get : 0x0000000A
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 90 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: add
+Running test: add
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00500F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 01FF8FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x0000000A  get : 0x0000000A
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 90 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: andi
+Running test: andi
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00900F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 002FFF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000009  get : 0x00000009
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 90 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: and
+Running test: and
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00900F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00100F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EFFFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000009  get : 0x00000009
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 120 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: auipc
+Running test: auipc
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00500F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00005F97
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00005F97
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00006004  get : 0x00006004
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00006008  get : 0x00006008
+Time: 130 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 130 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 130 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 130 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: beq
+Running test: beq
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00200E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EE8463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00000F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00300E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 01EE8463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00000F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 150 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 180 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 210 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 240 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 280 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 290 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 290 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 290 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 290 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: bge
+Running test: bge
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00200E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EED663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00200F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 0080006F
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00400F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00300E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 01EED663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 0080006F
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 00000F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00400F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00300E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 01EED463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00300F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 150 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000004  get : 0x00000004
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 180 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 210 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 240 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 280 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 290 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 310 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 340 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 370 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 410 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 420 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 420 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 420 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 420 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: bgeu
+Running test: bgeu
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00200E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EEF663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00200F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00000463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00000F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00300E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 01EEF663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00000463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 00500F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00400F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00300E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 01EEF663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00000463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 00300F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00400F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = FFD00E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 01EEF463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = 00500F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1046] = 00400F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1047] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 150 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 180 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 210 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 240 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 280 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 290 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 310 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 340 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 370 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 410 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 420 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 440 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 480 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 510 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 540 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 580 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000004  get : 0x00000004
+Time: 590 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 590 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 590 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 590 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: blt
+Running test: blt
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00200E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EEC663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00200F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00000463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00000F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00300E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 01EEC663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00000463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 00500F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00400F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00300E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 01EEC663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00000463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 00300F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00400F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = FFD00E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 01EEC463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = 00100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1046] = 00400F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1047] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 150 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000002  get : 0x00000002
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 180 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 220 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 250 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 280 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 320 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 330 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 350 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 390 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 420 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 450 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 490 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000003  get : 0x00000003
+Time: 500 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 520 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 550 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 580 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 620 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000004  get : 0x00000004
+Time: 630 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 630 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 630 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 630 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: bltu
+Running test: bltu
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00200E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EEE663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00200F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00000463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00000F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00300E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 01EEE663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00000463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 00500F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00400F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00300E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 01EEE663
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00000463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 00300F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00400F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = FFD00E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1044] = 01EEE463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1045] = 00500F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1046] = 00400F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1047] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 150 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000002  get : 0x00000002
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 180 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 220 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 250 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 280 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 320 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 330 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 350 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 390 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 420 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 450 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 490 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000003  get : 0x00000003
+Time: 500 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 520 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 550 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 580 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 620 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 630 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 630 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 630 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 630 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: bne
+Running test: bne
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00200E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EE9463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00000F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00300E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 01EE9463
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00000F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 150 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 180 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 190 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 190 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 190 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 190 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: jalr
+Running test: jalr
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000D97
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 018D8D93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00800F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00700E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 000D8067
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 000E8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 000F0F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 90 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 120 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 150 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 180 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 220 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000008  get : 0x00000008
+Time: 230 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 230 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 230 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 230 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: jal
+Running test: jal
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00800F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00700E93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 0080006F
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 000E8F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 000F0F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 150 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000008  get : 0x00000008
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 160 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 160 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lb
+Running test: lb
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000F17
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 018F0F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 000F0F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 004F0F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 008F0F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00CF0F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: @ 00000406 = 1030
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 0000019F
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 0000012F
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = FFFFFFFE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 90 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0xFFFFFF9F  get : 0xFFFFFF9F
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000002F  get : 0x0000002F
+Time: 200 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFF  get : 0xFFFFFFFF
+Time: 250 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFE  get : 0xFFFFFFFE
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 300 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lbu
+Running test: lbu
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000F17
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 018F0F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 000F4F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 004F4F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 008F4F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00CF4F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: @ 00000406 = 1030
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 0000019F
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 0000012F
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = FFFFFFFE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 90 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x0000009F  get : 0x0000009F
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000002F  get : 0x0000002F
+Time: 200 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000000FF  get : 0x000000FF
+Time: 250 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000000FE  get : 0x000000FE
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 300 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lh
+Running test: lh
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000F17
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 018F0F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 000F1F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 004F1F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 008F1F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00CF1F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: @ 00000406 = 1030
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 0001E654
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00000329
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = FFFFFFFE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 90 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0xFFFFE654  get : 0xFFFFE654
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000329  get : 0x00000329
+Time: 200 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFF  get : 0xFFFFFFFF
+Time: 250 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFE  get : 0xFFFFFFFE
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 300 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lhu
+Running test: lhu
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000F17
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 018F0F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 000F5F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 004F5F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 008F5F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00CF5F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: @ 00000406 = 1030
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 0001E654
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00000329
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = FFFFFFFE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 90 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x0000E654  get : 0x0000E654
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000329  get : 0x00000329
+Time: 200 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000FFFF  get : 0x0000FFFF
+Time: 250 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000FFFE  get : 0x0000FFFE
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 300 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lui
+Running test: lui
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00000FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x12345000  get : 0x12345000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 150 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: lw
+Running test: lw
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000F17
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 018F0F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 000F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 004F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 008F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 00CF2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: @ 00000406 = 1030
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00000001
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 00000006
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 00000007
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 00000008
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 90 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000006  get : 0x00000006
+Time: 200 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000007  get : 0x00000007
+Time: 250 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000008  get : 0x00000008
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 300 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 300 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: ori
+Running test: ori
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00900F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 001FEF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000009  get : 0x00000009
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000009  get : 0x00000009
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 90 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: or
+Running test: or
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00900F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00100F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EFEFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000009  get : 0x00000009
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000009  get : 0x00000009
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 120 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: rebouclage
+Running test: rebouclage
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = FFFFFFB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 12345FB7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFF000  get : 0xFFFFF000
+Time: 140 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 140 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 140 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 140 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sb
+Running test: sb
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000F17
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 038F0F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 19500093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFF00113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 03600193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 12C00213
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 001F0023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 002F0223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 003F0423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 004F0623
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 000F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 004F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 008F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00CF2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: @ 0000040E = 1038
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 00000000
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00000000
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00000000
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 00000000
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 90 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 120 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 150 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 180 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 210 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000095  get : 0x00000095
+Time: 470 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x000000FF  get : 0x000000FF
+Time: 520 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000036  get : 0x00000036
+Time: 570 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000002C  get : 0x0000002C
+Time: 620 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 620 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 620 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 620 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sh
+Running test: sh
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000F17
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 03CF0F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 000210B7
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = BA208093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FFF00113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 21C00193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFE00213
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 001F1023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 002F1223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 003F1423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 004F1623
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 000F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 004F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 008F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 00CF2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: @ 0000040F = 1039
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = 00000000
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1040] = 00000000
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1041] = 00000000
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1042] = 00000000
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1043] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 90 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 150 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 180 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 210 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 240 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000BA2  get : 0x00000BA2
+Time: 500 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000FFFF  get : 0x0000FFFF
+Time: 550 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000021C  get : 0x0000021C
+Time: 600 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x0000FFFE  get : 0x0000FFFE
+Time: 650 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 650 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 650 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 650 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: slli
+Running test: slli
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00500F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 000F9F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 006F9F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000140  get : 0x00000140
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 120 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sll
+Running test: sll
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00500F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 000F9FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00600113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 002F9FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000140  get : 0x00000140
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 150 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: slti
+Running test: slti
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00500093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00C0AF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 0040AF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 0050AF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FF410113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FFF12F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 140 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 170 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 200 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 210 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sltiu
+Running test: sltiu
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00500093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00C0BF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 0040BF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 0050BF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FF400113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FFF13F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = FFF00193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FF41BF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 140 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 170 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 200 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 230 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 260 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 270 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 270 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: slt
+Running test: slt
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00500093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00600113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 0020AFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00700193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00600213
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0021AFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00222FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 140 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 170 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 200 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 230 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 240 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sltu
+Running test: sltu
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00800093
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00900113
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 0020BFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00F00193
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 00700213
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 0021BFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00223FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 140 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 170 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 200 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 210 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 230 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 240 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 240 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: srai
+Running test: srai
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = FFC00F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 402FDF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 00800F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 402FDF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0xFFFFFFFC  get : 0xFFFFFFFC
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0xFFFFFFFF  get : 0xFFFFFFFF
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000008  get : 0x00000008
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000002  get : 0x00000002
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 150 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sra
+Running test: sra
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = FFC00F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 41EFDFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 00800F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 41EFDFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0xFFFFFFFC  get : 0xFFFFFFFC
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0xFFFFFFFF  get : 0xFFFFFFFF
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 140 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000008  get : 0x00000008
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000002  get : 0x00000002
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 180 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 180 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: srli
+Running test: srli
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00400F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 002FDF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000004  get : 0x00000004
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 90 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: srl
+Running test: srl
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00400F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00200F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EFDFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000004  get : 0x00000004
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 120 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sub
+Running test: sub
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00500F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00900F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 41FF8FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 41FF0FB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 140 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000009  get : 0x00000009
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 150 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 150 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: sw
+Running test: sw
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00000F17
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 02CF0F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 000F2023
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = 000F2223
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1028] = 000F2423
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1029] = 000F2623
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1030] = 00500F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1031] = 000F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1032] = 004F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1033] = 008F2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1034] = 00CF2F83
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: @ 0000040B = 1035
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1035] = 00000001
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1036] = 00000009
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1037] = 00000002
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1038] = 00000008
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1039] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 90 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 320 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000005  get : 0x00000005
+Time: 330 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 380 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 430 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 480 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 530 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 530 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 530 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 530 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: xori
+Running test: xori
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 001FCF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 001FCF93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 90 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 120 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+Preparing test: xor
+Running test: xor
+INFO: [Simtcl 6-17] Simulation restarted
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 0  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: @ 00000400 = 1024
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1024] = 00100F93
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1025] = 00100F13
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1026] = 01EFCFB3
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Note: memory[1027] = FFFFFFFF
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_RAM/line__149  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/RAM32_reload.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 0 ps  Iteration: 1  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 50 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000001  get : 0x00000001
+Time: 60 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 80 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+Time: 110 ns  Iteration: 6  Process: /tb_autotest/C_PROC/PO/CND/line__35  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/CPU_CND.vhd
+Note: pout expect   : 0x00000000  get : 0x00000000
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Note: PASSED 
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+Failure: Assertion violation
+Time: 120 ns  Iteration: 1  Process: /tb_autotest/tb_pout  File: /user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd
+$finish called at time : 120 ns : File "/user/8/.base/mountash/home/mountash_oudrhirs/vhd/bench/tb_autotest.vhd" Line 206
+## exit
+INFO: [Common 17-206] Exiting xsim at Sat Apr 26 17:19:19 2025...
